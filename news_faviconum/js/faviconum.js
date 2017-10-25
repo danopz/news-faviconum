@@ -1,5 +1,13 @@
+'use strict';
+
+/**
+ * News FavicoNum
+ *
+ * @link      https://github.com/danopz/news_faviconum
+ * @copyright Copyright (c) 2017 Daniel Opitz
+ * @license   https://github.com/danopz/news_faviconum/blob/master/LICENSE (MIT License)
+ */
 (function (document, OCA) {
-    'use strict';
     document.addEventListener('DOMContentLoaded', function() {
         var bg = OCA.Theming.color || '#000',
             color = OCA.Theming.inverted ? '#000' : '#fff',
