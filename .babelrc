@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "> 5%"
+          ]
+        }
+      }
+    ],
+    "minify"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-es2015-classes"
+  ]
+}

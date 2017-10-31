@@ -1,0 +1,27 @@
+{
+  "name": "news_faviconum",
+  "version": "0.0.1",
+  "description": "Write the count of unread feeds from the Nextcloud news app into the favicon",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/app.js -o news_faviconum/js/faviconum.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danopz/news_faviconum.git"
+  },
+  "author": "Daniel Opitz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danopz/news_faviconum/issues"
+  },
+  "homepage": "https://github.com/danopz/news_faviconum",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.2.0"
+  }
+}
