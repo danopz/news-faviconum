@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src/app.js -o news_faviconum/js/faviconum.js",
+    "lint": "eslint src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,9 +20,11 @@
   "homepage": "https://github.com/danopz/news_faviconum",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-classes": "^6.24.1",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-minify": "^0.2.0"
+    "babel-preset-minify": "^0.2.0",
+    "eslint": "^4.10.0"
   }
 }

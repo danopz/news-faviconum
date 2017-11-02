@@ -5,6 +5,7 @@
  * @copyright Copyright (c) 2017 Daniel Opitz
  * @license   https://github.com/danopz/news_faviconum/blob/master/LICENSE (MIT License)
  */
+/*global OCA*/
 
 class Icon
 {
