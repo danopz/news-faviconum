@@ -5,9 +5,10 @@
  * @copyright Copyright (c) 2017 Daniel Opitz
  * @license   https://github.com/danopz/news_faviconum/blob/master/LICENSE (MIT License)
  */
-/*global OCA*/
+/*eslint no-unused-vars: ["error", { "varsIgnorePattern": "^Options$" }]*/
+import Options from './Options';
 
-class Icon
+export default class Icon
 {
     /**
      * @param document {Document}
@@ -69,82 +70,3 @@ class Icon
         this.context.fillText(text, x, y);
     }
 }
-
-class App
-{
-    /**
-     * @param titleElem {HTMLTitleElement}
-     * @param faviconElem {HTMLLinkElement}
-     */
-    constructor(titleElem, faviconElem)
-    {
-        this.origFavicon = faviconElem.getAttribute('href');
-        this.origType = faviconElem.getAttribute('type');
-        this.title = titleElem;
-        this.favicon = faviconElem;
-    }
-
-    /**
-     * @param icon {Icon}
-     */
-    update(icon)
-    {
-        let matches = this.title.text.match(/\((\d+)\)/);
-        let favicon = this.origFavicon;
-        let type = this.origType;
-
-        if (matches) {
-            let match = matches.pop();
-            let data = icon.render(match);
-            favicon = data.favicon;
-            type = data.type;
-        }
-
-        this.favicon.setAttribute('href', favicon);
-        this.favicon.setAttribute('type', type);
-    }
-}
-
-class Options
-{
-    strokeColor = 'rgba(0,0,0,0.6)';
-    fontModifierTop = 1 / 3 * 1.7;
-    fontModifierBottom = 1 / 3 * 2.1;
-    size = 64;
-    padding = this.size/16;
-    color = '#fff';
-    background = '#000';
-
-    /**
-     * @param OCA {object}
-     */
-    constructor(OCA)
-    {
-        if (OCA.hasOwnProperty('Theming')) {
-            this.background = OCA.Theming.color;
-
-            if (OCA.Theming.inverted) {
-                this.color = '#000';
-                this.strokeColor = 'rgba(255,255,255,0.6)';
-            }
-        }
-    }
-}
-
-(function(document, OCA){
-    document.addEventListener('DOMContentLoaded', function() {
-        let options = new Options(OCA);
-        let icon = new Icon(document, options);
-
-        let title = document.querySelector('title');
-        let app = new App(title, document.querySelector('head > link[rel="icon"]'));
-
-        let observer = new MutationObserver(function() {
-            app.update(icon);
-        });
-
-        observer.observe(title, {
-            childList: true
-        });
-    });
-})(document, OCA);

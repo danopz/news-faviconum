@@ -6,11 +6,11 @@
         "targets": {
           "browsers": [
             "> 5%"
-          ]
+          ],
+          "uglify": true
         }
       }
-    ],
-    "minify"
+    ]
   ],
   "plugins": [
     "transform-class-properties",
