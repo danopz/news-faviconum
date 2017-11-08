@@ -1,5 +1,7 @@
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const BannerPlugin = require('webpack').BannerPlugin;
+const pkg = require(path.resolve(__dirname, 'package.json'));
 
 module.exports = {
     entry: {
@@ -9,6 +11,9 @@ module.exports = {
         new UglifyJSPlugin({
             mangle: true,
             comments: false
+        }),
+        new BannerPlugin({
+            banner: `News FavicoNum\n@link ${pkg.homepage}\n@copyright 2017 ${pkg.author}\n@license ${pkg.license}`
         })
     ],
     module: {
