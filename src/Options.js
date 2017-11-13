@@ -11,7 +11,7 @@ export default class Options
     fontModifierTop = 1 / 3 * 1.7;
     fontModifierBottom = 1 / 3 * 2.1;
     size = 64;
-    padding = this.size/16;
+    padding = this.size / 16;
     color = '#fff';
     background = '#000';
 
