@@ -13,7 +13,7 @@ module.exports = {
             comments: false
         }),
         new BannerPlugin({
-            banner: `News FavicoNum\n@link ${pkg.homepage}\n@copyright 2017 ${pkg.author}\n@license ${pkg.license}`
+            banner: `News FavicoNum\n@link ${pkg.homepage}\n@copyright 2017-2018 ${pkg.author}\n@license ${pkg.license}`
         })
     ],
     module: {
