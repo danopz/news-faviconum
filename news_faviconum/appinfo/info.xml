@@ -7,10 +7,10 @@
     <description><![CDATA[Add the current count of unread feeds into the favicon]]></description>
     <licence>MIT</licence>
     <author>Daniel Opitz</author>
-    <version>1.0.0-beta</version>
+    <version>1.0.0-beta.2</version>
     <category>customization</category>
 
     <dependencies>
-        <nextcloud min-version="13" max-version="13"/>
+        <nextcloud min-version="13" max-version="14"/>
     </dependencies>
 </info>
